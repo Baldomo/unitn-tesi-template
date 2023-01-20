@@ -1,0 +1,5 @@
+# Downloaded binaries directory
+bin/
+
+# Document output
+build/

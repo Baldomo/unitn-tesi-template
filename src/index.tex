@@ -1,0 +1,35 @@
+% Gruppo per definizione di successione capitoli senza interruzione di pagina
+\begingroup
+  % Ridefinizione dei comandi di clear page
+  \renewcommand{\cleardoublepage}{}
+  \renewcommand{\clearpage}{}
+
+  % Ridefinizione del formato del titolo del capitolo
+  % Da
+  %   Capitolo X
+  %   Titolo capitolo
+  % A
+  %   X   Titolo capitolo
+  \titleformat{\chapter}
+    {\normalfont\Huge\bfseries}{\thechapter}{1em}{}
+  % Spaziature dei titoli per varie sezioni
+  \titlespacing*{\chapter}{0pt}{0.59in}{0.02in}
+  \titlespacing*{\section}{0pt}{0.20in}{0.02in}
+  \titlespacing*{\subsection}{0pt}{0.10in}{0.02in}
+
+  % Sommario e' un breve riassunto del lavoro svolto dove si descrive
+  % l’obiettivo, l’oggetto della tesi, le metodologie e
+  % le tecniche usate, i dati elaborati e la spiegazione delle conclusioni
+  % alle quali siete arrivati.
+  % Il sommario dell’elaborato consiste al massimo di 3 pagine e deve contenere le seguenti informazioni:
+  %   - contesto e motivazioni
+  %   - breve riassunto del problema affrontato
+  %   - tecniche utilizzate e/o sviluppate
+  %   - risultati raggiunti, sottolineando il contributo personale del laureando/a
+  \input{sections/sommario}
+
+  % Lista dei capitoli
+  \input{chapters/capitolo1}
+  \input{chapters/capitolo2}
+  \input{chapters/capitolo3}
+\endgroup

@@ -1,0 +1,35 @@
+%% Nella bibliografia devono essere riportati tutte le fonti consultate 
+%% per lo svolgimento della tesi. La bibliografia deve essere redatta 
+%% in ordine alfabetico sul cognome del primo autore. 
+%% 
+%% La forma della citazione bibliografica va inserita secondo la fonte utilizzata:
+%% 
+%% LIBRI
+%% Cognome e iniziale del nome autore/autori, la data di edizione, titolo, casa editrice, eventuale numero dell’edizione. 
+%% 
+%% ARTICOLI DI RIVISTA
+%% Cognome e iniziale del nome autore/autori, titolo articolo, titolo rivista, volume, numero, numero di pagine.
+%% 
+%% ARTICOLI DI CONFERENZA
+%% Cognome e iniziale del nome autore/autori (anno), titolo articolo, titolo conferenza, luogo della conferenza (città e paese), date della conferenza, numero di pagine. 
+%% 
+%% SITOGRAFIA
+%% La sitografia contiene un elenco di indirizzi Web consultati e disposti in ordine alfabetico. 
+%% E’ necessario:
+%%   Copiare la URL (l’indirizzo web) specifica della pagina consultata
+%%   Se disponibile, indicare il cognome e nome dell’autore, il titolo ed eventuale sottotitolo del testo
+%%   Se disponibile, inserire la data di ultima consultazione della risorsa (gg/mm/aaaa).
+
+% aggiunta del capitolo nell'indice
+\addcontentsline{toc}{chapter}{Bibliografia}
+\bibliographystyle{plain}
+\bibliography{biblio}
+    
+\titleformat{\chapter}
+  {\normalfont\Huge\bfseries}{Allegato \thechapter}{1em}{}
+
+% sezione Allegati - opzionale
+\appendix
+\input{sections/allegati}
+
+\end{document}

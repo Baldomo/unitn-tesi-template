@@ -1,0 +1,8 @@
+# Don't highlight unreachable code (SC2317)
+disable=SC2317
+
+# Enable following external files when sourcing
+external-sources=true
+
+# Look for files in ./makesh
+source-path=makesh

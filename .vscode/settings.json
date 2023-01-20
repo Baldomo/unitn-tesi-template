@@ -1,0 +1,24 @@
+{
+    "editor.wordWrap": "on",
+    "terminal.integrated.profiles.windows": {
+        "Git Bash": {
+            "source": "Git Bash",
+            "args": ["--login"]
+        }
+    },
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+    "VsCodeTaskButtons.showCounter": false,
+    "VsCodeTaskButtons.tasks": [
+        {
+            "label": "$(run) Compila",
+            "task": "Genera PDF",
+            "tooltip": "Compila il progetto in un file PDF"
+        },
+        {
+            "label": "$(eye) Sviluppo",
+            "task": "Sviluppo PDF",
+            "tooltip": "Avvia Tectonic in modalità \"continua\": compila il PDF ogni volta che i file vengono modificati"
+        }
+    ],
+}

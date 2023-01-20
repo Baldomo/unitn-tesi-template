@@ -1,0 +1,50 @@
+\documentclass[
+  a4paper,
+  11pt,
+  titlepage,
+  twoside,
+  openany
+]{book}
+
+% Layout generale
+\usepackage[
+  paperheight = 29.7cm,
+  paperwidth = 21cm,
+  outer = 1.5cm,
+  inner = 2.5cm,
+  top = 2cm,
+  bottom = 2cm
+]{geometry}
+
+% Librerie varie
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{plain}
+\usepackage{setspace}
+\usepackage{titlesec}
+
+\usepackage[italian]{babel}
+
+% Importa configurazione utente
+\input{config}
+
+\singlespacing
+
+\begin{document}
+
+% Disabilita numerazione
+\pagenumbering{gobble}
+\input{sections/pagina_iniziale}
+\clearpage
+
+% Sezione Ringraziamenti (opzionale)
+\input{sections/ringraziamenti}
+\clearpage
+\pagestyle{plain} % nessuna intestazione e pie pagina con numero al centro
+
+% Riabilita numerazione pagine in numeri arabi
+\mainmatter
+
+% Indice
+\tableofcontents
+\clearpage
