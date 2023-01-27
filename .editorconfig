@@ -10,5 +10,4 @@ insert_final_newline = false
 
 [*.tex]
 indent_size = 2
-trim_trailing_whitespace = false
-insert_final_newline = false
+insert_final_newline = true

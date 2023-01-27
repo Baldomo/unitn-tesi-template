@@ -19,6 +19,7 @@
 % Librerie varie
 \usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
+\usepackage{newclude}
 \usepackage{plain}
 \usepackage{setspace}
 \usepackage{titlesec}
@@ -26,7 +27,7 @@
 \usepackage[italian]{babel}
 
 % Importa configurazione utente
-\input{config}
+\include*{config}
 
 \singlespacing
 
@@ -34,11 +35,11 @@
 
 % Disabilita numerazione
 \pagenumbering{gobble}
-\input{sections/pagina_iniziale}
+\include*{sections/pagina_iniziale}
 \clearpage
 
 % Sezione Ringraziamenti (opzionale)
-\input{sections/ringraziamenti}
+\include*{sections/ringraziamenti}
 \clearpage
 \pagestyle{plain} % nessuna intestazione e pie pagina con numero al centro
 

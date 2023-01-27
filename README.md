@@ -175,7 +175,15 @@ oppure importandole in programmi di grafica vettoriale come Inkscape ed [esporta
 
 ---
 
-Il pacchetto `titlesec` potrebbe dare errore di layout **solo con alcuni font alternativi** se dopo ogni `\include{chapters/...}` non viene inserita una riga vuota, nella seguente maniera:
+Il pacchetto `titlesec` potrebbe dare errore di layout **solo con alcuni font alternativi** se non viene utilizzato il comando `\include*` (della libreria `newclude`) per importare i file.
+
+```latex
+\include*{chapters/capitolo1}
+\include*{chapters/capitolo2}
+\include*{chapters/capitolo3}
+```
+
+In alternativa, dopo ogni `\include{chapters/...}` deve essere inserita una riga vuota, nella seguente maniera:
 
 ```latex
 \input{chapters/capitolo1}
