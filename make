@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
+# Scarica sempre makesh in caso la repo sia stata clonata senza --recursive
+git submodule update --remote --init makesh >/dev/null
+
 makesh_lib_dir="$(cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd)"/makesh
 source "$makesh_lib_dir/lib.sh"
 source "$makesh_lib_dir/message.sh"
+
+shopt -s extglob nullglob globstar
 
 sources=(
     # src/*.tex

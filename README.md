@@ -135,7 +135,7 @@ Ad esempio data la bibliografia:
 Occorre innanzitutto creare una repository personale usando questa come template (vedi [documentazione di Github](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template)). La repository personale può quindi essere clonata in locale tramite Git (Git Bash su Windows), ad esempio:
 
 ```shell
-$ git clone https://github.com/username/repository
+$ git clone --recursive https://github.com/username/repository
 ```
 
 > Aprendo la cartella del progetto con Visual Studio Code, alcune estensioni vengono raccomandate per una migliore esperienza di sviluppo/scrittura. É fortemente consigliato installarle.
