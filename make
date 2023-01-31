@@ -26,6 +26,19 @@ make::bindir() {
     mkdir -p "$bin_dir"
 }
 
+# Prova a utilizzare vari downloader per scaricare un file
+downloader() {
+    if command -v curl > /dev/null 2>&1; then
+        curl --silent --show-error --fail --location "$1" --output "$2"
+        return
+    fi
+    if command -v wget > /dev/null 2>&1; then
+        wget "$1" -O "$2"
+        return
+    fi
+    msg::die "Nessun downloader installato (curl o wget sono necessari)"
+}
+
 #:(download_tectonic) Scarica il compilatore LaTeX Tectonic
 make::download_tectonic() {
     lib::requires bindir
@@ -33,7 +46,7 @@ make::download_tectonic() {
 
     local installer="$bin_dir/installer.sh"
     pushd "$bin_dir" >/dev/null || msg::die "Cannot access %s" "$bin_dir"
-    curl --proto '=https' --tlsv1.2 -fsSL https://drop-sh.fullyjustified.net > "$installer"
+    downloader https://drop-sh.fullyjustified.net "$installer"
     msg::msg "Installer Tectonic scaricato in: ./${installer#"$makesh_script_dir/"}"
     chmod +x "$installer"
     "$installer"
